@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class Portfolio extends Component {
+class Resume extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    return <>Here is my portfolio</>;
+    return <>Here is my resume</>;
   }
 }
 
-export default Portfolio;
+export default Resume;
