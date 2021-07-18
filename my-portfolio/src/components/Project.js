@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+import { Card, Button } from "react-bootstrap";
 class Project extends Component {
   constructor(props) {
     super(props);
@@ -6,13 +8,21 @@ class Project extends Component {
   }
   render() {
     return (
-      <div style={{ border: "1px solid black" }}>
-        <h1>{this.props.title}</h1>
-        <p>{this.props.description}</p>
-        <a target="_blank" rel="noreferrer" href={this.props.link}>
-          Github Link
-        </a>
-      </div>
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={this.props.image} />
+        <Card.Body>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>{this.props.description}</Card.Text>
+          <Button
+            variant="primary"
+            onClick={() => {
+              window.open(this.props.link, "_blank");
+            }}
+          >
+            Github Repo
+          </Button>
+        </Card.Body>
+      </Card>
     );
   }
 }

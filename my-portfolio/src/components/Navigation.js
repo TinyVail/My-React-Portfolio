@@ -85,7 +85,7 @@ class Navigation extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        {body}
+        <Container>{body}</Container>
       </>
     );
   }
